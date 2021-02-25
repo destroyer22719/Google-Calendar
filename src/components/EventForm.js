@@ -6,7 +6,7 @@ import ParticipantsForm from "./ParticipantsForm";
 require('dotenv').config()
 
 
-function EventForm() {
+const EventForm = (props) => {
 
 	const gapi = window.gapi;
 	const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -17,7 +17,7 @@ function EventForm() {
 
 	const [summary, summaryChange] = useState("");
 	const [desc, descChange] = useState(""); 
-	const [start, onStartChange] = useState(new Date()); 
+	const [start, onStartChange] = useState(props.start || new Date()); 
 	const [end, onEndChange] = useState(start); 
     const [state, dispatch] = useReducer(participantReducer, []);
 
@@ -63,8 +63,7 @@ function EventForm() {
 		attendees: state
 	}
 
-	const addEvent = () => {
-		console.log(event);
+	const addEvent = settings => {
 		gapi.load("client:auth2", async () => {
 			gapi.client.init({
 				apiKey: API_KEY,
@@ -78,7 +77,7 @@ function EventForm() {
 					console.log("Signed in")
 					const request = gapi.client.calendar.events.insert({
 						"calendarId": "primary",
-						"resource": event,
+						"resource": settings,
 					});
 
 					request.execute(event => {
@@ -100,11 +99,11 @@ function EventForm() {
 			<DateTimePicker
 				onChange={onEndChange}
 				value={end}
-			/><br/><h2>Summary</h2>
-			<input type="text" onChange={e => summaryChange(e.target.value)}/>
-			<br/><h2>Description</h2>
-			<input type="text" onChange={e => descChange(e.target.value)}/>
-			<button onClick={addEvent}>Add Event</button>
+			/><br/><label for="summary">Summary</label>
+			<input type="text" id="summary" onChange={e => props.summaryChange ? props.summaryChange(e.target.value) : summaryChange(e.target.value)}/>
+			<br/><label for="description">Description</label>
+			<input type="text" id="description" onChange={e => props.descChange ? props.descChange(e.target.value) : descChange(e.target.value)}/>
+			<button onClick={() => addEvent(event)}>Add Event</button>
 			<ParticipantsForm state={state} dispatch={dispatch}/>
 		</div>
 	);
