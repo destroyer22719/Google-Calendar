@@ -3,7 +3,7 @@
 exports[`Should render ParticipantsForm component 1`] = `
 <div>
   <form
-    onSubmit={[Function]}
+    onSubmit={[MockFunction]}
   >
     <label
       htmlFor="participant"

@@ -25,13 +25,15 @@ test("Should handle summary change", () => {
     wrapper.find("#summary").simulate("change", {
         target: {value: "Hello World"}
     });
-    expect(summaryChange).toHaveBeenCalledWith("Hello World");
+
+    expect(summaryChange).toBeCalledWith("Hello World");
 });
 
 test("Should handle description change", () => {
     wrapper.find("#description").simulate("change", {
         target: {value: "Hello World! Visit us!"}
     });
-    expect(descChange).toHaveBeenCalledWith("Hello World! Visit us!");
+
+    expect(descChange).toBeCalledWith("Hello World! Visit us!");
 });
 
