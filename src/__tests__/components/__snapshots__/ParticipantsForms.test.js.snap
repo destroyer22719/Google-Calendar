@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render component 1`] = `
+<div>
+  <h2>
+    Start
+  </h2>
+  <DateTimePicker
+    calendarIcon={
+      <svg
+        className="react-datetime-picker__calendar-button__icon react-datetime-picker__button__icon"
+        height={19}
+        stroke="black"
+        strokeWidth={2}
+        viewBox="0 0 19 19"
+        width={19}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="15"
+          width="15"
+          x="2"
+          y="2"
+        />
+        <line
+          x1="6"
+          x2="6"
+          y1="0"
+          y2="4"
+        />
+        <line
+          x1="13"
+          x2="13"
+          y1="0"
+          y2="4"
+        />
+      </svg>
+    }
+    clearIcon={
+      <svg
+        className="react-datetime-picker__clear-button__icon react-datetime-picker__button__icon"
+        height={19}
+        stroke="black"
+        strokeWidth={2}
+        viewBox="0 0 19 19"
+        width={19}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="4"
+          x2="15"
+          y1="4"
+          y2="15"
+        />
+        <line
+          x1="15"
+          x2="4"
+          y1="4"
+          y2="15"
+        />
+      </svg>
+    }
+    closeWidgets={true}
+    isCalendarOpen={null}
+    isClockOpen={null}
+    maxDetail="minute"
+    onChange={[Function]}
+    value={2021-02-25T15:42:04.000Z}
+  />
+  <br />
+  <h2>
+    End
+  </h2>
+  <DateTimePicker
+    calendarIcon={
+      <svg
+        className="react-datetime-picker__calendar-button__icon react-datetime-picker__button__icon"
+        height={19}
+        stroke="black"
+        strokeWidth={2}
+        viewBox="0 0 19 19"
+        width={19}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="15"
+          width="15"
+          x="2"
+          y="2"
+        />
+        <line
+          x1="6"
+          x2="6"
+          y1="0"
+          y2="4"
+        />
+        <line
+          x1="13"
+          x2="13"
+          y1="0"
+          y2="4"
+        />
+      </svg>
+    }
+    clearIcon={
+      <svg
+        className="react-datetime-picker__clear-button__icon react-datetime-picker__button__icon"
+        height={19}
+        stroke="black"
+        strokeWidth={2}
+        viewBox="0 0 19 19"
+        width={19}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="4"
+          x2="15"
+          y1="4"
+          y2="15"
+        />
+        <line
+          x1="15"
+          x2="4"
+          y1="4"
+          y2="15"
+        />
+      </svg>
+    }
+    closeWidgets={true}
+    isCalendarOpen={null}
+    isClockOpen={null}
+    maxDetail="minute"
+    onChange={[Function]}
+    value={2021-02-25T15:42:04.000Z}
+  />
+  <br />
+  <label
+    for="summary"
+  >
+    Summary
+  </label>
+  <input
+    id="summary"
+    onChange={[Function]}
+    type="text"
+  />
+  <br />
+  <label
+    for="description"
+  >
+    Description
+  </label>
+  <input
+    id="description"
+    onChange={[Function]}
+    type="text"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Add Event
+  </button>
+  <ParticipantsForm
+    dispatch={[Function]}
+    state={Array []}
+  />
+</div>
+`;
