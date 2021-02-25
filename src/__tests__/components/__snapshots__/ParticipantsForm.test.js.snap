@@ -16,7 +16,9 @@ exports[`Should render ParticipantsForm component 1`] = `
       type="email"
       value=""
     />
-    <button>
+    <button
+      id="addParticipant"
+    >
       Add Participant
     </button>
   </form>

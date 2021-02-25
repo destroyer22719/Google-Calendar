@@ -103,7 +103,7 @@ const EventForm = (props) => {
 			<input type="text" id="summary" onChange={e => props.summaryChange ? props.summaryChange(e.target.value) : summaryChange(e.target.value)}/>
 			<br/><label for="description">Description</label>
 			<input type="text" id="description" onChange={e => props.descChange ? props.descChange(e.target.value) : descChange(e.target.value)}/>
-			<button onClick={() => addEvent(event)}>Add Event</button>
+			<button id="addEvent" onClick={() => addEvent(event)}>Add Event</button>
 			<ParticipantsForm state={state} dispatch={dispatch}/>
 		</div>
 	);

@@ -158,6 +158,7 @@ exports[`Should render component 1`] = `
     type="text"
   />
   <button
+    id="addEvent"
     onClick={[Function]}
   >
     Add Event

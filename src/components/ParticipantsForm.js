@@ -18,7 +18,7 @@ const ParticipantsForm = ({state, dispatch, ...props}) => {
             <form onSubmit={props.submitParticipant ? props.submitParticipant : submitParticipant}>
                 <label htmlFor="participant">Add Participant</label>
                 <input type="email" id="participant" value={newParticipant} onChange={e => props.setNewParticipant ? props.setNewParticipant(e.target.value) : setNewParticipant(e.target.value)}/>
-                <button>Add Participant</button>
+                <button id="addParticipant">Add Participant</button>
             </form>
             {state.map(({email: participant}) => <ParticipantItem key={participant} email={participant} dispatch={dispatch}/>)}
         </div>
