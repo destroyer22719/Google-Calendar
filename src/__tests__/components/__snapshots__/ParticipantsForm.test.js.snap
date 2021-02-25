@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ParticipantsForm component 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="participant"
+    >
+      Add Participant
+    </label>
+    <input
+      id="participant"
+      onChange={[Function]}
+      type="email"
+      value=""
+    />
+    <button>
+      Add Participant
+    </button>
+  </form>
+</div>
+`;
